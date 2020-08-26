@@ -94,7 +94,7 @@
             color: $secondary-color;
         }     
     }
-    .nav-link{
+    .nav-link {
         display: inline-block;
         position: relative;
         font-size: 30px;
@@ -102,7 +102,7 @@
         font-weight: 300;
         color: white;
         text-decoration: none;
-        @include easeout
+        @include easeout;
         &:hover {
             color:$secondary-color;
         }

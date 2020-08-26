@@ -1,5 +1,6 @@
-@import'config';
-@import'menu';
+@import 'config';
+@import 'menu';
+@import 'mobile';
 
 *{
     box-sizing: border-box;
@@ -44,6 +45,8 @@ header{
     color: $secondary-color;
 }
 main{
+    overflow: hidden;
+
     padding: 4rem;
     height: 100%;
     text-align: right;
