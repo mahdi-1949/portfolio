@@ -21,25 +21,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Validate portrait assets
+      - name: Use verified portrait source
         shell: bash
         run: |
           set -euo pipefail
-          file dist/images/mahdi-portrait-1.webp
-          file dist/images/mahdi-portrait-2.webp
-          file dist/images/mahdi-portrait-3.webp
-          test -s dist/images/mahdi-portrait-1.webp
-          test -s dist/images/mahdi-portrait-2.webp
-          test -s dist/images/mahdi-portrait-3.webp
+          test -s dist/images/me.jpg
+          file dist/images/me.jpg
 
-      - name: Bust static asset cache
+      - name: Bust cache and replace damaged portrait files
         shell: bash
         run: |
           set -euo pipefail
           VERSION="${GITHUB_SHA::12}"
           sed -E -i "s#css/site-polish\.css\?v=[^\"]+#css/site-polish.css?v=${VERSION}#g" dist/index.html
           sed -E -i "s#js/main\.js\?v=[^\"]+#js/main.js?v=${VERSION}#g" dist/index.html
-          sed -E -i "s#images/mahdi-portrait-([123])\.webp\?v=[^\"]+#images/mahdi-portrait-\1.webp?v=${VERSION}#g" dist/index.html
+          sed -E -i "s#images/mahdi-portrait-1\.webp\?v=[^\"]+#images/me.jpg?v=${VERSION}#g" dist/index.html
+          sed -E -i "s#images/mahdi-portrait-2\.webp\?v=[^\"]+#images/me.jpg?v=${VERSION}#g" dist/index.html
+          sed -E -i "s#images/mahdi-portrait-3\.webp\?v=[^\"]+#images/me.jpg?v=${VERSION}#g" dist/index.html
 
       - name: Publish dist to gh-pages
         shell: bash
