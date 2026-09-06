@@ -1,0 +1,1 @@
+High-resolution portrait assets are managed as binary Git blobs. This marker is harmless and can be removed later.
