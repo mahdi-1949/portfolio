@@ -21,6 +21,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Build portrait assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/images
+          base64 --decode .portrait-assets/p1-tiny.b64 > dist/images/mahdi-portrait-1.webp
+          base64 --decode .portrait-assets/p2-tiny.b64 > dist/images/mahdi-portrait-2.webp
+          base64 --decode .portrait-assets/p3-tiny.b64 > dist/images/mahdi-portrait-3.webp
+          file dist/images/mahdi-portrait-1.webp
+          file dist/images/mahdi-portrait-2.webp
+          file dist/images/mahdi-portrait-3.webp
+
       - name: Publish dist to gh-pages
         shell: bash
         run: |
