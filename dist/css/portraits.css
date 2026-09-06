@@ -3,27 +3,28 @@
   position: absolute;
   left: -8px;
   top: 24px;
-  width: 218px;
+  width: 230px;
   z-index: 5;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 24px;
   background: rgba(13,18,26,.94);
   box-shadow: 0 28px 75px rgba(0,0,0,.4);
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
 }
 .hero-person-card::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to top, rgba(7,10,15,.72), transparent 45%);
+  background: linear-gradient(to top, rgba(7,10,15,.72), transparent 44%);
 }
 .hero-person-card img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 16%;
+  image-rendering: auto;
 }
 .hero-person-meta {
   position: absolute;
@@ -46,70 +47,125 @@
   text-transform: uppercase;
 }
 
-/* Let the main project composition breathe around the portrait */
 .hero-visual .browser-card-main {
-  transform: rotate(-3deg) translate(60px,-30px);
+  transform: rotate(-3deg) translate(64px,-30px);
 }
 .hero-visual .browser-card-secondary {
   right: -16px;
   bottom: 18px;
 }
 
-/* About portrait gets a cleaner, editorial crop */
+/* High-resolution editorial About portrait */
 .portrait-frame img {
-  object-position: center 22%;
-  filter: saturate(.92) contrast(1.025);
+  object-position: center 20%;
+  filter: saturate(.96) contrast(1.015);
+  image-rendering: auto;
 }
 
+/* Contact / CTA: intentional two-column composition on desktop */
 .contact-card {
-  padding-right: min(39vw, 455px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, .62fr);
+  grid-template-rows: auto auto auto auto;
+  column-gap: clamp(42px, 5vw, 82px);
+  align-items: center;
+  padding: clamp(48px, 5.2vw, 72px);
+  min-height: 590px;
 }
-.contact-card h2,
-.contact-card > p {
+.contact-card > .section-kicker,
+.contact-card > h2,
+.contact-card > p,
+.contact-card > .contact-actions {
+  grid-column: 1;
   position: relative;
   z-index: 3;
 }
+.contact-card > .section-kicker {
+  align-self: end;
+  margin-bottom: 0;
+}
+.contact-card h2 {
+  margin-top: 16px;
+  max-width: 760px;
+  font-size: clamp(42px, 5.2vw, 70px);
+  line-height: 1.01;
+}
+.contact-card > p {
+  max-width: 610px;
+  margin-top: 22px;
+  font-size: 15px;
+  line-height: 1.72;
+}
+.contact-actions {
+  margin-top: 30px;
+  align-self: start;
+}
 .contact-portrait {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  right: 42px;
-  bottom: -38px;
-  width: min(30vw, 330px);
-  border-radius: 28px 28px 0 0;
+  grid-column: 2;
+  grid-row: 1 / 5;
+  justify-self: end;
+  align-self: center;
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  border-radius: 30px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 28px 70px rgba(0,0,0,.34);
-  transform: rotate(2deg);
+  border: 1px solid rgba(255,255,255,.13);
+  box-shadow: 0 32px 75px rgba(0,0,0,.38);
+  transform: rotate(1.5deg);
+  background: #171c24;
+}
+.contact-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 21px;
 }
 .contact-portrait::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(12,16,22,.22), transparent 45%);
+  background: linear-gradient(to top, rgba(12,16,22,.28), transparent 42%);
   pointer-events: none;
 }
 .contact-portrait img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 17%;
+  image-rendering: auto;
+}
+.contact-card .contact-orb {
+  right: -80px;
+  top: -120px;
+  width: 560px;
+  height: 560px;
+  opacity: .8;
 }
 
 @media (max-width: 1050px) {
   .hero-person-card {
     left: 2%;
     top: 30px;
-    width: 200px;
+    width: 205px;
   }
   .hero-visual .browser-card-main {
     transform: rotate(-3deg) translate(75px,-25px);
   }
   .contact-card {
-    padding-right: 300px;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    column-gap: 34px;
+    padding: 46px;
   }
   .contact-portrait {
-    width: 250px;
-    right: 28px;
+    width: 280px;
+  }
+  .contact-card h2 {
+    font-size: clamp(38px, 5vw, 58px);
   }
 }
 
@@ -139,15 +195,39 @@
     bottom: 42px;
     min-width: 180px;
   }
+
   .contact-card {
-    padding-right: 30px;
-    padding-bottom: 360px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    padding: 34px 28px 28px;
+    min-height: 0;
+  }
+  .contact-card > .section-kicker,
+  .contact-card > h2,
+  .contact-card > p,
+  .contact-card > .contact-actions,
+  .contact-portrait {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .contact-card h2 {
+    font-size: clamp(38px, 11vw, 54px);
+    max-width: 100%;
+  }
+  .contact-card > p {
+    max-width: 100%;
+  }
+  .contact-actions {
+    gap: 16px;
   }
   .contact-portrait {
-    width: min(72vw, 280px);
-    right: 50%;
-    transform: translateX(50%) rotate(1.5deg);
-    bottom: -30px;
+    margin-top: 34px;
+    width: min(100%, 390px);
+    justify-self: center;
+    transform: none;
+    border-radius: 24px;
   }
 }
 
@@ -157,5 +237,16 @@
   }
   .hero-visual .browser-card-main {
     transform: rotate(-2deg) translate(20px,112px);
+  }
+  .contact-card {
+    padding: 28px 22px 22px;
+  }
+  .contact-card h2 {
+    font-size: clamp(35px, 10.8vw, 46px);
+  }
+  .contact-actions .button,
+  .contact-actions .text-link {
+    width: 100%;
+    justify-content: center;
   }
 }
