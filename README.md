@@ -1,63 +1,49 @@
 # Mahdi Tavakoli — Personal Portfolio
 
-A modern, responsive portfolio built to present my website design and front-end work as a focused client-facing experience.
+A modern, responsive portfolio website built to present selected web design and front-end work with a stronger personal brand, clear service positioning, and conversion-focused calls to action.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Portfolio-Open%20Website-b9ff66?style=for-the-badge)](https://mahdi-1949.github.io/portfolio/)
-[![GitHub Profile](https://img.shields.io/badge/GitHub-Mahdi%20Tavakoli-181717?style=for-the-badge&logo=github)](https://github.com/mahdi-1949)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20Portfolio-2ea44f?style=for-the-badge)](https://mahdi-1949.github.io/portfolio/)
+[![Source Code](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/mahdi-1949/portfolio)
 
-## Portfolio Direction
+## Current Direction
 
-The 2026 redesign moves away from the original developer-style multi-page portfolio and turns the site into a more polished freelance showcase focused on:
+The portfolio is designed around a focused freelance positioning: modern websites for healthcare, aesthetics, service businesses, and conversion-focused landing pages.
 
-- Strong visual hierarchy and art direction
-- Selected work instead of a long project archive
-- Healthcare, aesthetics and business website positioning
-- Live project previews and direct demo links
-- Responsive, conversion-aware layouts
-- Clear service and process sections
-- A focused project inquiry call to action
+### Featured Work
 
-## Featured Work
+- [Pacific Pain Clinic — Website Redesign Concept](https://mahdi-1949.github.io/pacific-pain-clinic-concept/)
+- [Arisa Medical Aesthetics — Landing Page Concept](https://mahdi-1949.github.io/beauty-service/)
 
-### Pacific Pain Clinic
-Healthcare website redesign concept focused on trust, treatment clarity, responsive UX and appointment-oriented calls to action.
+## Portfolio Experience
 
-- [Live Website](https://mahdi-1949.github.io/pacific-pain-clinic-concept/)
-- [Repository](https://github.com/mahdi-1949/pacific-pain-clinic-concept)
-
-### Arisa Medical Aesthetics
-Premium medical-aesthetics landing page concept with a more editorial, image-led and elevated visual direction.
-
-- [Live Website](https://mahdi-1949.github.io/beauty-service/)
-- [Repository](https://github.com/mahdi-1949/beauty-service)
-
-## Services Highlighted
-
-- Website Design & Redesign
-- Landing Pages
-- Responsive Front-End Development
-- Healthcare & Aesthetics Websites
-- WordPress & SEO
-- Marketing Automation & CRM
+- Modern single-page presentation
+- Selected live project previews
+- Services and design process sections
+- Personal-brand photography
+- Responsive navigation and layouts
+- Mobile-friendly interactions
+- Clear freelance project CTA
 
 ## Tech Stack
 
-- Semantic HTML5
-- Modern CSS
-- Vanilla JavaScript
-- Responsive design
+- HTML5
+- CSS / SCSS
+- JavaScript
+- Responsive Web Design
 - GitHub Pages
 
-## Deployment
+## Repository Structure
 
-The browser-ready site lives in `dist/`. Updates to `master` are automatically published through the `gh-pages` branch.
+- `dist/` — browser-ready portfolio
+- `scss/` — earlier source styles and project history
+- `.github/workflows/` — automatic publishing to the `gh-pages` branch
 
-## Safety / Previous Version
+## Backup
 
-The portfolio version that existed before the 2026 redesign is preserved in the `backup-before-2026-redesign` branch.
+The earlier portfolio implementation is preserved in the `backup-before-2026-redesign` branch.
 
 ---
 
-### Available for freelance website projects
+### Available for freelance web projects
 
-Explore the live portfolio and selected work, or visit my [GitHub profile](https://github.com/mahdi-1949).
+I work on modern websites, landing pages, responsive interfaces, healthcare websites, website redesigns, and polished front-end experiences.
