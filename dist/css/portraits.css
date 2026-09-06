@@ -1,0 +1,161 @@
+/* Professional portrait integration */
+.hero-person-card {
+  position: absolute;
+  left: -8px;
+  top: 24px;
+  width: 218px;
+  z-index: 5;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 24px;
+  background: rgba(13,18,26,.94);
+  box-shadow: 0 28px 75px rgba(0,0,0,.4);
+  transform: rotate(-5deg);
+}
+.hero-person-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(7,10,15,.72), transparent 45%);
+}
+.hero-person-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.hero-person-meta {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hero-person-meta strong {
+  font: 700 12px Manrope, sans-serif;
+  color: #fff;
+}
+.hero-person-meta small {
+  color: rgba(255,255,255,.68);
+  font-size: 8px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Let the main project composition breathe around the portrait */
+.hero-visual .browser-card-main {
+  transform: rotate(-3deg) translate(60px,-30px);
+}
+.hero-visual .browser-card-secondary {
+  right: -16px;
+  bottom: 18px;
+}
+
+/* About portrait gets a cleaner, editorial crop */
+.portrait-frame img {
+  object-position: center 22%;
+  filter: saturate(.92) contrast(1.025);
+}
+
+.contact-card {
+  padding-right: min(39vw, 455px);
+}
+.contact-card h2,
+.contact-card > p {
+  position: relative;
+  z-index: 3;
+}
+.contact-portrait {
+  position: absolute;
+  z-index: 2;
+  right: 42px;
+  bottom: -38px;
+  width: min(30vw, 330px);
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 28px 70px rgba(0,0,0,.34);
+  transform: rotate(2deg);
+}
+.contact-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12,16,22,.22), transparent 45%);
+  pointer-events: none;
+}
+.contact-portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (max-width: 1050px) {
+  .hero-person-card {
+    left: 2%;
+    top: 30px;
+    width: 200px;
+  }
+  .hero-visual .browser-card-main {
+    transform: rotate(-3deg) translate(75px,-25px);
+  }
+  .contact-card {
+    padding-right: 300px;
+  }
+  .contact-portrait {
+    width: 250px;
+    right: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-visual {
+    min-height: 610px;
+  }
+  .hero-person-card {
+    width: 170px;
+    left: 0;
+    top: 5px;
+    transform: rotate(-4deg);
+  }
+  .hero-visual .browser-card-main {
+    width: 88%;
+    height: 320px;
+    transform: rotate(-2deg) translate(28px,105px);
+  }
+  .hero-visual .browser-card-secondary {
+    width: 66%;
+    height: 230px;
+    right: -2px;
+    bottom: 10px;
+  }
+  .floating-note {
+    left: 2%;
+    bottom: 42px;
+    min-width: 180px;
+  }
+  .contact-card {
+    padding-right: 30px;
+    padding-bottom: 360px;
+  }
+  .contact-portrait {
+    width: min(72vw, 280px);
+    right: 50%;
+    transform: translateX(50%) rotate(1.5deg);
+    bottom: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-person-card {
+    width: 148px;
+  }
+  .hero-visual .browser-card-main {
+    transform: rotate(-2deg) translate(20px,112px);
+  }
+}
