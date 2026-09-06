@@ -4,21 +4,30 @@ const siteNav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.site-nav a');
 const year = document.querySelector('#year');
 
-// Load the portrait-specific layer separately so the core stylesheet stays untouched.
+// Load portrait and layout polish after the core stylesheet.
 if (!document.querySelector('link[data-portrait-styles]')) {
   const portraitStyles = document.createElement('link');
   portraitStyles.rel = 'stylesheet';
-  portraitStyles.href = 'css/portraits.css';
+  portraitStyles.href = 'css/portraits.css?v=20260907-2';
   portraitStyles.dataset.portraitStyles = 'true';
   document.head.appendChild(portraitStyles);
 }
 
+if (!document.querySelector('link[data-portfolio-fixes]')) {
+  const portfolioFixes = document.createElement('link');
+  portfolioFixes.rel = 'stylesheet';
+  portfolioFixes.href = 'css/portfolio-fixes.css?v=20260907-2';
+  portfolioFixes.dataset.portfolioFixes = 'true';
+  document.head.appendChild(portfolioFixes);
+}
+
 // Personal-brand photography: hero, about and final CTA.
+const portraitVersion = '20260907-hq';
 const heroVisual = document.querySelector('.hero-visual');
 if (heroVisual && !heroVisual.querySelector('.hero-person-card')) {
   heroVisual.insertAdjacentHTML('afterbegin', `
     <div class="hero-person-card" aria-label="Portrait of Mahdi Tavakoli">
-      <img src="images/mahdi-portrait-1.webp" alt="Mahdi Tavakoli, web designer and front-end developer" width="360" height="450" fetchpriority="high">
+      <img src="images/mahdi-portrait-1.webp?v=${portraitVersion}" alt="Mahdi Tavakoli, web designer and front-end developer" width="1122" height="1402" fetchpriority="high" decoding="async">
       <div class="hero-person-meta">
         <strong>Mahdi Tavakoli</strong>
         <small>Web Designer · Front-End Developer</small>
@@ -29,17 +38,18 @@ if (heroVisual && !heroVisual.querySelector('.hero-person-card')) {
 
 const aboutPortrait = document.querySelector('.portrait-frame img');
 if (aboutPortrait) {
-  aboutPortrait.src = 'images/mahdi-portrait-2.webp';
+  aboutPortrait.src = `images/mahdi-portrait-2.webp?v=${portraitVersion}`;
   aboutPortrait.alt = 'Mahdi Tavakoli working from a modern creative workspace';
-  aboutPortrait.width = 360;
-  aboutPortrait.height = 450;
+  aboutPortrait.width = 1122;
+  aboutPortrait.height = 1402;
+  aboutPortrait.decoding = 'async';
 }
 
 const contactCard = document.querySelector('.contact-card');
 if (contactCard && !contactCard.querySelector('.contact-portrait')) {
   contactCard.insertAdjacentHTML('beforeend', `
     <div class="contact-portrait" aria-hidden="true">
-      <img src="images/mahdi-portrait-3.webp" alt="" width="360" height="450" loading="lazy">
+      <img src="images/mahdi-portrait-3.webp?v=${portraitVersion}" alt="" width="1122" height="1402" loading="lazy" decoding="async">
     </div>
   `);
 }
