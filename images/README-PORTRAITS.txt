@@ -1,0 +1,1 @@
+Portrait files are optimized WebP assets for the portfolio. Do not recompress below normal web quality.
