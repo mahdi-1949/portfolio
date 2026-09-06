@@ -1,57 +1,213 @@
 <!DOCTYPE html>
-<html lang="per">
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/all.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خوش آمدید</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mahdi Tavakoli — web designer and front-end developer creating modern healthcare, aesthetics, business websites and conversion-focused landing pages.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>Mahdi Tavakoli — Web Designer & Front-End Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body id="bg-img">
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-    <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Mahdi Tavakoli home">
+        <span class="brand-mark">MT</span>
+        <span class="brand-copy"><strong>Mahdi Tavakoli</strong><small>Web Designer</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Start a project <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> Available for select freelance projects</div>
+        <h1>I design websites that make businesses <em>look worth choosing.</em></h1>
+        <p class="hero-lede">Modern, responsive websites for healthcare, aesthetics and service businesses — designed to build trust quickly, clarify the offer and turn attention into action.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work <span>↘</span></a>
+          <a class="button button-ghost" href="https://github.com/mahdi-1949" target="_blank" rel="noreferrer">GitHub profile <span>↗</span></a>
         </div>
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait">
+        <div class="hero-proof" aria-label="Portfolio highlights">
+          <div><strong>02</strong><span>Featured redesigns</span></div>
+          <div><strong>03</strong><span>Live web experiences</span></div>
+          <div><strong>100%</strong><span>Responsive by default</span></div>
+        </div>
+      </div>
 
-                </div>
+      <div class="hero-visual reveal" aria-label="Selected website previews">
+        <div class="visual-glow"></div>
+        <div class="browser-card browser-card-main">
+          <div class="browser-bar"><span></span><span></span><span></span><small>pacific pain clinic</small></div>
+          <div class="browser-canvas clinic-preview">
+            <div class="mini-nav"><b>PACIFIC</b><span>PAIN CLINIC</span></div>
+            <div class="mini-hero">
+              <div class="mini-copy"><small>ADVANCED PAIN CARE</small><strong>Move better.<br>Live with less pain.</strong><i></i><i></i></div>
+              <div class="mini-orb"><span>+</span></div>
             </div>
-            <ul class="menu-nav">
-                <li class="nav-item current">
-                    <a href="index.html" class="nav-link ">خانه</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">درباره من</a>
-                </li>
-    
-                <li class="nav-item">
-                    <a href="work.html" class="nav-link">نمونه کارهای من</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">راه های ارتباطی</a>
-                </li>
-            </ul>
-        </nav>
-       
-    </header>
-    
-    <main id="home">
-        <h1 class="lg-heading">مهدی <span class="text-secondary"> توکلی</span></h1>
-        <h2 class="sm-heading"> توسعه دهنده وب</h2>
-        <div class="icons">
-            <a href="https://github.com/mahdi-1949/">
-                <i class="fab fa-github fa-3x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-linkedin fa-3x"></i>
-            </a>
+          </div>
         </div>
-    </main>
-    <script src="js/main.js"></script>
+        <div class="browser-card browser-card-secondary">
+          <div class="browser-bar"><span></span><span></span><span></span><small>arisa aesthetics</small></div>
+          <div class="browser-canvas beauty-preview">
+            <div class="beauty-word">ARISA</div>
+            <p>MEDICAL AESTHETICS</p>
+            <div class="beauty-lines"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="floating-note"><span>↗</span><strong>Built to feel premium</strong><small>not template-driven</small></div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Specialties">
+      <div class="marquee-track">
+        <span>WEB DESIGN</span><i>✦</i><span>HEALTHCARE</span><i>✦</i><span>AESTHETICS</span><i>✦</i><span>LANDING PAGES</span><i>✦</i><span>RESPONSIVE UI</span><i>✦</i><span>WORDPRESS</span><i>✦</i><span>SEO</span><i>✦</i><span>WEB DESIGN</span><i>✦</i><span>HEALTHCARE</span><i>✦</i><span>AESTHETICS</span><i>✦</i><span>LANDING PAGES</span>
+      </div>
+    </section>
+
+    <section class="work section-shell" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker">01 / SELECTED WORK</span>
+          <h2>Work designed to earn the next click.</h2>
+        </div>
+        <p>Two focused concept projects showing how I approach visual direction, hierarchy, responsive design and conversion-oriented website experiences.</p>
+      </div>
+
+      <article class="project project-clinic reveal">
+        <div class="project-content">
+          <div class="project-index">01</div>
+          <div class="project-tags"><span>Healthcare</span><span>Web Redesign</span><span>Front-End</span></div>
+          <h3>Pacific Pain Clinic</h3>
+          <p>A complete visual rethink for a pain-management clinic: calmer hierarchy, stronger credibility, clearer treatment pathways and distinct page experiences.</p>
+          <ul class="project-points">
+            <li>Conversion-focused hero direction</li>
+            <li>Distinct service and inner-page layouts</li>
+            <li>Responsive, lightweight implementation</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-light" href="https://mahdi-1949.github.io/pacific-pain-clinic-concept/" target="_blank" rel="noreferrer">Live website <span>↗</span></a>
+            <a class="text-link" href="https://github.com/mahdi-1949/pacific-pain-clinic-concept" target="_blank" rel="noreferrer">View code <span>↗</span></a>
+          </div>
+        </div>
+        <a class="project-preview" href="https://mahdi-1949.github.io/pacific-pain-clinic-concept/" target="_blank" rel="noreferrer" aria-label="Open Pacific Pain Clinic live website">
+          <div class="preview-toolbar"><span></span><span></span><span></span><small>mahdi-1949.github.io/pacific-pain-clinic-concept</small></div>
+          <iframe src="https://mahdi-1949.github.io/pacific-pain-clinic-concept/" title="Pacific Pain Clinic website preview" loading="lazy" tabindex="-1"></iframe>
+          <div class="preview-overlay"><span>Open live site ↗</span></div>
+        </a>
+      </article>
+
+      <article class="project project-beauty reveal">
+        <div class="project-content">
+          <div class="project-index">02</div>
+          <div class="project-tags"><span>Medical Aesthetics</span><span>Art Direction</span><span>Landing Page</span></div>
+          <h3>Arisa Medical Aesthetics</h3>
+          <p>A premium California-focused aesthetics concept with editorial styling, stronger visual rhythm and a more elevated treatment-discovery experience.</p>
+          <ul class="project-points">
+            <li>Luxury healthcare art direction</li>
+            <li>Image-led storytelling and interaction</li>
+            <li>Responsive landing-page implementation</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-dark" href="https://mahdi-1949.github.io/beauty-service/" target="_blank" rel="noreferrer">Live website <span>↗</span></a>
+            <a class="text-link dark-link" href="https://github.com/mahdi-1949/beauty-service" target="_blank" rel="noreferrer">View code <span>↗</span></a>
+          </div>
+        </div>
+        <a class="project-preview" href="https://mahdi-1949.github.io/beauty-service/" target="_blank" rel="noreferrer" aria-label="Open Arisa Medical Aesthetics live website">
+          <div class="preview-toolbar light-toolbar"><span></span><span></span><span></span><small>mahdi-1949.github.io/beauty-service</small></div>
+          <iframe src="https://mahdi-1949.github.io/beauty-service/" title="Arisa Medical Aesthetics website preview" loading="lazy" tabindex="-1"></iframe>
+          <div class="preview-overlay dark-overlay"><span>Open live site ↗</span></div>
+        </a>
+      </article>
+    </section>
+
+    <section class="services section-shell" id="services">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker">02 / SERVICES</span>
+          <h2>From “we need a website” to a polished digital presence.</h2>
+        </div>
+        <p>I focus on the parts that make a website feel intentional: positioning, visuals, hierarchy, responsive execution and the path toward conversion.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal"><span>01</span><div class="service-icon">⌁</div><h3>Website Design & Redesign</h3><p>Fresh visual direction for businesses whose current site no longer matches the quality of their service.</p></article>
+        <article class="service-card reveal"><span>02</span><div class="service-icon">↗</div><h3>Landing Pages</h3><p>Focused, conversion-aware pages for campaigns, offers, lead generation and service launches.</p></article>
+        <article class="service-card reveal"><span>03</span><div class="service-icon">◫</div><h3>Responsive Front-End</h3><p>Clean implementation across desktop, tablet and mobile with lightweight interactions and motion.</p></article>
+        <article class="service-card reveal"><span>04</span><div class="service-icon">✚</div><h3>Healthcare & Aesthetics</h3><p>Trust-led websites for clinics and medical businesses where credibility and clarity matter immediately.</p></article>
+        <article class="service-card reveal"><span>05</span><div class="service-icon">W</div><h3>WordPress & SEO</h3><p>Practical website improvements, structured content and search-focused on-page foundations.</p></article>
+        <article class="service-card reveal"><span>06</span><div class="service-icon">∞</div><h3>Automation & CRM</h3><p>Digital experiences that can connect into modern marketing automation, lead capture and CRM workflows.</p></article>
+      </div>
+    </section>
+
+    <section class="process section-shell">
+      <div class="process-panel reveal">
+        <div class="section-heading process-heading">
+          <div><span class="section-kicker">03 / PROCESS</span><h2>A clear process. No mystery box.</h2></div>
+        </div>
+        <div class="process-grid">
+          <div><span>01</span><h3>Understand</h3><p>Audience, offer, goals, current pain points and what the site needs to achieve.</p></div>
+          <div><span>02</span><h3>Direct</h3><p>Visual language, hierarchy and the key sections that shape the experience.</p></div>
+          <div><span>03</span><h3>Build</h3><p>Responsive implementation with focused interactions and clean front-end behavior.</p></div>
+          <div><span>04</span><h3>Refine</h3><p>Polish the details, test breakpoints and make the final experience feel cohesive.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="about-visual reveal">
+        <div class="portrait-frame">
+          <img src="images/me2.jpg" alt="Mahdi Tavakoli" loading="lazy">
+          <div class="portrait-label"><span>Based online</span><strong>Working globally</strong></div>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <span class="section-kicker">04 / ABOUT</span>
+        <h2>Design-minded.<br>Front-end fluent.</h2>
+        <p class="about-lede">I’m Mahdi Tavakoli, a web designer and front-end developer interested in the space where strong visual direction meets practical implementation.</p>
+        <p>I care about websites that communicate quality before a visitor reads every word. That means better composition, stronger imagery, thoughtful spacing, responsive behavior and a clear next step.</p>
+        <div class="about-stack">
+          <span>HTML</span><span>CSS / SCSS</span><span>JavaScript</span><span>Responsive Design</span><span>Git / GitHub</span><span>WordPress</span><span>SEO</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <div class="contact-card reveal">
+        <div class="contact-orb" aria-hidden="true"></div>
+        <span class="section-kicker">05 / LET'S WORK TOGETHER</span>
+        <h2>Have a website that should feel <em>much better</em> than it does now?</h2>
+        <p>Tell me what you’re building, redesigning or trying to improve. I’m open to selected freelance website projects.</p>
+        <div class="contact-actions">
+          <a class="button button-primary button-large" href="https://github.com/mahdi-1949" target="_blank" rel="noreferrer">Start from my GitHub <span>↗</span></a>
+          <a class="text-link" href="#work">Review selected work <span>↑</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div><strong>Mahdi Tavakoli</strong><span>Web Designer & Front-End Developer</span></div>
+    <div class="footer-links"><a href="#top">Back to top ↑</a><a href="https://github.com/mahdi-1949" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    <small>© <span id="year"></span> Mahdi Tavakoli</small>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
