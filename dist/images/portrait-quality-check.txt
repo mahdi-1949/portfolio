@@ -1,0 +1,1 @@
+Portrait source dimensions: 900x1125 minimum for deployed WebP assets.
